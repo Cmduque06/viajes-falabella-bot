@@ -44,7 +44,7 @@ try:
     time.sleep(5)
     destino_input.send_keys(Keys.ENTER)
 
-    # 5. Selecciona fechas (ajusta selectores según el sitio)
+    # 5. Selecciona fechas
     # a. Haz clic en el campo de fechas
     driver.find_element(By.XPATH, "/html/body/app-root/div/header-wrapper/header-view-1/div/div/sbox/div/div/searchbox-v2/div/div/div/div/div/div/div/div[2]/div[1]/div[2]/div/div[2]/div/div/div").click()
     time.sleep(3)
@@ -86,11 +86,10 @@ try:
 
     # 7. Realizar la búsqueda
     driver.find_element(By.XPATH, "/html/body/app-root/div/header-wrapper/header-view-1/div/div/sbox/div/div/searchbox-v2/div/div/div/div/div/div/div/div[2]/div[1]/div[4]/button").click()
-    time.sleep(20)  # Espera a que carguen los resultados
+    time.sleep(20)
 
     # 8. Extraer los resultados de la primera búsqueda
     resultados = driver.find_element(By.XPATH, "/html/body/aloha-app-root/aloha-results/div[2]/div/div/div/div[2]/div[2]/div/aloha-list-view-container")
-    # Aquí puedes extraer información de los paquetes dentro de este contenedor
 
     # 9. Aplicar el filtro "Desayuno incluido"
     driver.find_element(By.XPATH, "/html/body/aloha-app-root/aloha-results/div[2]/div/div/div/div[2]/div[1]/aloha-filter-list/div/ul/li[4]/aloha-filter/aloha-checkbox-filter/ul/li[1]/span").click()
@@ -102,7 +101,6 @@ try:
 
     # 10. Extrae los resultados después de aplicar el filtro
     resultados_filtrados = driver.find_element(By.XPATH, "/html/body/aloha-app-root/aloha-results/div[2]/div/div/div/div[2]/div[2]/div")
-    # Aquí puedes extraer información relevante de los paquetes filtrados
 
     # 11. Extrae precios de los paquetes en la primera página
     paquetes = driver.find_elements(By.XPATH, "//div[contains(@class, 'package-card')]")
