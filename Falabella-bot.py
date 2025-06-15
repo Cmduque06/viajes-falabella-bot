@@ -1,7 +1,4 @@
 # BOT para automatizar la búsqueda de paquetes en Viajes Falabella
-# Autor: [Tu Nombre]
-# Repositorio: [Agrega aquí el enlace a tu repositorio remoto de GitHub]
-# Video de ejecución: [Agrega aquí el enlace al video]
 
 import time
 import json
@@ -11,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-# Configura las opciones para abrir una ventana en modo incógnita
+# Configuración de opciones de Chrome en incógnito
 chrome_options = Options()
 chrome_options.add_argument("--incognito")
 
